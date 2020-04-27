@@ -1,10 +1,12 @@
-# [Draft] ATAG Conformance Evaluation Report Tool (ACERT)
+# [Draft] FAST Reporting Tool prototype
 
-With this tool, people can find out how accessible their [authoring tool](https://www.w3.org/TR/ATAG20/#def-Authoring-Tool) is. It will guide them through the Success Criteria of the [Authoring Tool Accessibility Guidelines 2.0](https://www.w3.org/TR/ATAG20/) (ATAG 2.0).
+This is prototype of a tool that can be used for horizontal spec review. It is designed to be used in conjunction with [Framework for Accessible Specification of Technologies (https://w3c.github.io/apa/fast/#framework-for-accessible-specification-of-technologies) (FAST).
+
+This tool will help with accessibility related review of W3C specifications. It creates a report (JSON object) that can be presented as an evaluation against any W3C specification.
 
 ## Status
 
-This project is an early prototype.
+This project is an early prototype built on tooling developed by Eric Eggert/Hidde De Vries (W3C). It will be abstracted into more general set of tooling by Joshue O Connor/Michael Cooper (W3C).
 
 ## Development
 
@@ -22,7 +24,7 @@ Then, to build the app with [Rollup](https://rollupjs.org), and serve it on a lo
 npm run dev
 ```
 
-Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
+Navigate to [localhost:10001](http://localhost:10001). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
 
 ## Building and running in production mode
 
@@ -36,7 +38,19 @@ You can run the newly built app with `npm run start`. This uses [sirv](https://g
 
 ## Data structure
 
-This project has a JavaScript representation of the [ATAG 2.0 specification](https://w3.org/TR/ATAG20), [atag.js](https://github.com/w3c/wai-atag-report-tool/blob/master/src/data/atag.js).
+This project has a JavaScript representation of the [DRAFT Fast Checklist](https://w3c.github.io/apa/fast/checklist.html).
+
+Currently it is an abstraction from the original ATAG type layout that followed the object format outlined below. For the purposes of abstracting this tool for more general usage we follow the format here where:
+
+#For the grouping/renaming of sections:
+
+principle = page for new group of related FAST checkpoints
+guidelines = A new FAST section
+successcriterioa = Individual FAST checkpoints.
+
+The general process is to create instances of any given guideline/successcriteria for each FAST checkpoint.
+
+NOTE: None of this is normative.
 
 This is an example of everything that can exist in this object, formatted as [yaml](https://yaml.org/):
 
@@ -67,6 +81,8 @@ principle:
                - handle: Ordered Item 2
                  text: Full text for item 2
            - type: ulist
+           
+ 
               items:
                 - handle: Unordered item
                   text: Full text for item
