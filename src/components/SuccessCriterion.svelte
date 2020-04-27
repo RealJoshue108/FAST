@@ -11,11 +11,11 @@
   export let details = null;
 
   let results = [
-    { id: 'not-checked', text: 'Not checked' },
-    { id: 'passed', text: 'Passed' },
-    { id: 'failed', text: 'Failed' },
-    { id: 'cannot-tell', text: 'Cannot tell' },
-    { id: 'not-applicable', text: 'Not applicable' } 
+    { id: 'done', text: 'Done' },
+    { id: 'not-done', text: 'Not done' },
+    { id: 'in-progress', text: 'In progress' },
+    { id: 'not-applicable', text: 'N/A' }
+    // { id: 'not-applicable', text: 'Not applicable' } 
   ];
 
   let notes = null;

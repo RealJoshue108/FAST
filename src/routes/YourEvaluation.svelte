@@ -8,7 +8,7 @@
 
 <Header>
   <HeaderSub>
-    ATAG Report Tool
+    FAST Report Tool
   </HeaderSub>
   Your Evaluation
 </Header>
@@ -18,7 +18,7 @@
 <h2>About your evaluation</h2>
 
 <div class="field">
-  <label for="evaluation-meta-name">Name of authoring tool</label>
+  <label for="evaluation-meta-name">Name of W3C specification</label>
   <input type="text" bind:value={$evaluation["meta"]["name"]["value"]} id="evaluation-meta-name"on:change={() =>  evaluation.updateCache($evaluation)} />
 </div>
 
@@ -28,7 +28,7 @@
 </div>
 
 <div class="field">
-  <label for="evaluation-meta-name">Your organisation</label>
+  <label for="evaluation-meta-name">Your W3C working group</label>
   <input type="text" bind:value={$evaluation["meta"]["evaluatorOrg"]["value"]} id="evaluation-meta-name"on:change={() =>  evaluation.updateCache($evaluation)} />
 </div>
 

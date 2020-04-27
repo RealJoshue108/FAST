@@ -1,0 +1,304 @@
+{
+    principle: {
+      handle: "FAST Checklist",
+      text:
+        "If technology provides defines document semantics",
+      num: "Semantics.1",
+    },
+    guidelines: [
+      {
+        id: "authors-title",
+        num: "Semantics.1.1",
+        handle: "Authors can title Web pages",
+        text:
+          "Web content is classically exposed on \"pages\", each of which contains a different chunk of content. ",
+        successcriteria: [
+          {
+            id: "authors-title",
+            num: "Semantics.1.1",
+            handle: " ",
+            text:
+              "To help users easily identify their location in a set of pages, and navigate to the correct page, each pages should have a title that is effectively metadata. Technologies should provide ways for authors to create unique titles for each page.",
+            level:
+              " ",
+          },
+        ],
+      },
+      {
+        id: "title-sections",
+        handle: "Authors can title sections of content.",
+        text:
+          "Web content is frequently divided into multiple sections, each of which has a distinct topic.",
+        num: "Semantics.1.2",
+        successcriteria: [
+          {
+            id: "title-sections",
+            num: "Semantics.1.2",
+            handle: " ",
+            text:
+              "Users navigate among these sections to find the content most relevant to their purpose, which is especially important for users of assistive technology that don't provide a two-dimensional view of the content.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 17",
+                text:
+                  "Technologies should provide a mechanism for authors to provide section titles to help users navigate and identify their location.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: "support-understanding-of-abbreviations-idioms",
+        handle: "Authors can support understanding of abbreviations / acronyms / initialisms, idioms, jargon, etc.",
+        text:
+          "Abbreviations, acronyms, initialisms, idioms, and jargon comprise usages of content that may not be familiar to all users, so it can be helpful for authors to provide supplemental information about meaning.",
+        num: "Semantics.1.3",
+        successcriteria: [
+          {
+            id: "support-understanding-of-abbreviations-idioms",
+            num: "Semantics.1.3",
+            handle: " ",
+            text:
+              "Abbreviations, acronyms, and initialisms are also often frequently pronounced different from their spelling, their special nature may not be obvious from pronunciation alone.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 18",
+                text:
+                  "Therefore technologies should allow authors to provide pronunciation and meaning guidance for these language features.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: "support-pronunciation",
+        handle: "Authors can support correct machine pronunciation of ambiguously spelled terms (e.g., in the phrase \"I am content with this content\" there are different correct pronunciations of the lexeme \"content\")",
+        text:
+          "Many languages have lexical features that can be pronounced different ways and that carry different meanings.",
+        num: "Semantics.1.4",
+        successcriteria: [
+          {
+            id: "support-pronunciation",
+            num: "Semantics.1.4",
+            handle: " ",
+            text:
+              "Context generally clarifies intent, but this can be less effective when assistive technologies use default pronunciations.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 19",
+                text:
+                  "Therefore technologies should provide features to allow authors to clarify pronunciation intent when needed.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: "authors-identify-regions",
+        handle: "Authors can identify regions of content, particularly the \"main\" region.",
+        text:
+          "Users of some assistive technologies experience content in a linear fashion, which can make it hard to find intended content that is located after several blocks of less relevant content such as navigation and sidebars.",
+        num: "Semantics.1.5",
+        successcriteria: [
+          {
+            id: "authors-identify-regions",
+            num: "Semantics.1.5",
+            handle: " ",
+            text:
+              "Other users have difficulty making sense of the page design due to complexity or the effects of magnification. Supporting users to find relevant content quickly is important to effective use, and the best way to do this is to provide ways to identify regions of content easily. This can be done via headings but region type semantics is also particularly helpful. The main content region is the most important for users to find quickly, but other regions such as navigation, headers, footers, sidebars, and subsections are also important.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 20",
+                text:
+                  "Technologies should provide features to allow authors to identify content regions.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: "use-declarative-mechanisms",
+        handle: "Declarative mechanisms (that have accessibility semantics pre-defined in the spec) are used to implement technology features whenever possible.",
+        text:
+          "Declarative technologies create sets of pre-defined semantics that authors use to structure content. Because the semantics are well-defined, they can be broadly supported across the entire tool chain, including by assistive technologies.",
+        num: "Semantics.1.6",
+        successcriteria: [
+          {
+            id: "use-declarative-mechanisms",
+            num: "Semantics.1.6",
+            handle: " ",
+            text:
+              "Imperative technologies, by contrast, don't define semantics in advance, which allows creation of new forms of content but requires authors to implement all aspects of the user experience, including accessibility aspects that are frequently overlooked.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 21",
+                text:
+                  "For this reason, technologies should provide declarative semantics for known feature types.",
+              },
+           ],
+          },
+        ],
+      },
+      {
+        id: "express-relationships",
+        handle: "There are unambiguous ways to express relationships between units of content, such as object nesting, ID referencing, etc.",
+        text:
+          "Providing an accessible user experience sometimes requires tools to combine the features of or support rapid navigation between multiple related objects.",
+        num: "Semantics.1.6",
+        successcriteria: [
+          {
+            id: "express-relationships",
+            num: "Semantics.1.6",
+            handle: " ",
+            text:
+              "Technologies should provide ways for authors to define these relationships clearly and unambiguously.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 22",
+                text:
+                  "See more for the importance expressing relationships.",
+              },
+           ],
+          },
+        ],
+      },
+      {
+        id: "prefer-structural-semantics",
+        handle: "Prefer structural semantics to presentational semantics.",
+        text:
+          "Prefer structural semantics to presentational semantics.",
+        num: "Semantics.1.6",
+        successcriteria: [
+          {
+            id: "prefer-structural-semantics",
+            num: "Semantics.1.6",
+            handle: " ",
+            text:
+              "Authors frequently use presentation to convey structure, yet when taken out of context this presentation is not meaningful to all users.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 23",
+                text:
+                  "Technologies should emphasize structural semantics over presentational semantics, and support styling on the basis of structure rather than inferring structure on the basis of style.",
+              },
+           ],
+          },
+        ],
+      },
+      {
+        id: "mapping-relationships",
+        handle: "When providing presentational semantics, they can be easily mapped to structural semantics, e.g., to support restyling or meaningful exposure to accessibility APIs.",
+        text:
+          "If technologies do provide presentational semantics, they should define clear mappings to existing structural semantics.",
+        num: "Semantics.1.6",
+        successcriteria: [
+          {
+            id: "mapping-relationships",
+            num: "Semantics.1.6",
+            handle: " ",
+            text:
+              "This will allow users to interact with content on the basis of implied structure.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 24",
+                text:
+                  "See more for the importance of mapping presentational semantics to structural relationships.",
+              },
+           ],
+          },
+        ],
+      },
+      {
+        id: "support-authoring-use-cases",
+        handle: "Support a comprehensive set of authoring use cases to minimize the need for alternative content. (e.g., don't make authors resort to text in images to get the style they want).",
+        text:
+          "Many accessibility problems in web content arise from authors attempting to work around limitations of the content language and using the technology in a way that it was not intended.",
+        num: "Semantics.1.6",
+        successcriteria: [
+          {
+            id: "support-authoring-use-cases",
+            num: "Semantics.1.6",
+            handle: " ",
+            text:
+              "Technologies should provide rich feature sets that allows authors to accomplish their goals without resort to inaccessible usages.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 25",
+                text:
+                  "See more for the importance of authoring use cases.",
+              },
+           ],
+          },
+        ],
+      },
+      {
+        id: "semantics-allow-location",
+        handle: "Semantics allow precise and replicable location information in the document to be determined.",
+        text:
+          "Finding a given location in a document is important for a variety of use cases.",
+        num: "Semantics.1.6",
+        successcriteria: [
+          {
+            id: "semantics-allow-location",
+            num: "Semantics.1.6",
+            handle: " ",
+            text:
+              " Users of some assistive technologies require the tool to navigate to the location for them and may be confused if the location is merely approximate.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 26",
+                text:
+                  "Technologies should enable precise location finding, not only by supporting unique IDs but by structuring the language such that unambiguous and replicable selectors can be used and shared.",
+              },
+           ],
+          },
+        ],
+      },
+      {
+        id: "meaning-presentation",
+        handle: "Semantics exist to convey meaning that is commonly conveyed via presentation.",
+        text:
+          "Meaning is conveyed by a variety of presentational attributes.",
+        num: "Semantics.1.6",
+        successcriteria: [
+          {
+            id: "meaning-presentation",
+            num: "Semantics.1.6",
+            handle: " ",
+            text:
+              " Separated blocks of text represent paragraphs, indented text represents quotes, short enlarged text indicates headings, bold text conveys emphasis, relative size indicates relative importance, etc.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 27",
+                text:
+                  "Technologies should define structural semantics for such features.",
+              },
+           ],
+          },
+        ],
+      },
+    ],
+  },
+];

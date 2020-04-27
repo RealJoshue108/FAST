@@ -5,21 +5,21 @@
   import Guideline from './Guideline.svelte';
   import Pager from './Pager.svelte';
   import PagerLink from './PagerLink.svelte';
-  import atag from '../data/atag.js';
+  import new_fast from '../data/new_fast.js';
   export let id = null;
   export let className = undefined;
 
-  $: principle = atag[id].principle || null;
-  $: guidelines = atag[id].guidelines || null;
+  $: principle = new_fast[id].principle || null;
+  $: guidelines = new_fast[id].guidelines || null;
 
-  const normalisedPrincipleId = atag[id].principle.num.replace(/\./g, '').toLowerCase();
-  const linkToPrinciple = `https://www.w3.org/TR/ATAG20/#principle_${normalisedPrincipleId}`;
+  const normalisedPrincipleId = new_fast[id].principle.num.replace(/\./g, '').toLowerCase();
+  const linkToPrinciple = `https://w3c.github.io/apa/fast/#${normalisedPrincipleId}`;
 </script>
 
 <div class={className}>
   <Header>
     <HeaderSub>
-      ATAG Report Tool (<span class="visuallyhidden">Step </span>{id+1}<span aria-hidden="true">/</span><span class="visuallyhidden"> of </span>8)
+      FAST Report Tool (<span class="visuallyhidden">Step </span>{id+1}<span aria-hidden="true">/</span><span class="visuallyhidden"> of </span>8)
     </HeaderSub>
     {principle.handle}
   </Header>
@@ -34,17 +34,17 @@
     {#if id === 0}
     <PagerLink to={"/your-evaluation"} direction="previous">Your Evaluation</PagerLink>
     {/if}
-    {#if id > 0 && id < atag.length }
+    {#if id > 0 && id < new_fast.length }
     <PagerLink to={`/step/${id}`} direction="previous">
-      {`${atag[id-1].principle.handle}`}
+      {`${new_fast[id-1].principle.handle}`}
     </PagerLink>
     {/if}
-    {#if (id + 1) < atag.length }
+    {#if (id + 1) < new_fast.length }
     <PagerLink to={`/step/${id+2}`} direction="next">
-      {`${atag[id+1].principle.handle}`}
+      {`${new_fast[id+1].principle.handle}`}
     </PagerLink>
     {/if}
-    {#if (id + 1) === atag.length }
+    {#if (id + 1) === new_fast.length }
     <PagerLink to={"/results"} direction="next">View results</PagerLink>
     {/if}
   </Pager>

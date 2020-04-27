@@ -1,0 +1,129 @@
+{
+    principle: {
+      handle: "FAST Checklist",
+      text:
+        "If technology provides user interaction features",
+      num: "Interaction.1",
+    },
+    guidelines: [
+      {
+        id: "expose-object-type-to-a11y-api",
+        num: "Interaction.1.1",
+        handle: "For every user interface object type, the \"type\" of object can be exposed as a role to accessibility APIs",
+        text:
+          "A major way some users with disabilities access content is via assistive technologies, which provide various supplemental supports for interaction.",
+        successcriteria: [
+          {
+            id: "expose-object-type-to-a11y-api",
+            num: "Interaction.1.1",
+            handle: " ",
+            text:
+              "Many assistive technologies interact with content primarily via accessibility APIs, which contain an abstract model of the content that includes information about each object. The \"type\" of an object is important for users to know how to use it, which is typically exposed to accessibility APIs as a \"role\". Technologies should ensure features have a defined type and, if necessary, document accessibility API mappings for the several APIs in use.",
+            level:
+              " ",
+          },
+        ],
+      },
+      {
+        id: "provide-accessible-name",
+        handle: "For every user interface object type, there is a clearly defined mechanism for authors to provide and / or user agents determines the \"accessible name\" for accessibility APIs.",
+        text:
+          "Accessibility APIs provide an \"accessible name\" for each object, which labels it for the user. The accessible name is frequently the label for a form control or the text alternative for an object.",
+        num: "Interaction.1.2",
+        successcriteria: [
+          {
+            id: "provide-accessible-name",
+            num: "Interaction.1.2",
+            handle: " ",
+            text:
+              "Technologies should define how the accessible name for each object type can be determined, and provide features to allow authors to set the accessible name.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 19",
+                text:
+                  "Here is some more about this FAST checkpoint.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: "expose-states-props",
+        handle: "For user interface objects that can have states, properties, or values, authors can set these and these can be exposed to accessibility APIs.",
+        text:
+          "Along with the role, many objects require information about properties, states, and values to be fully usable. ",
+        num: "Interaction.1.3",
+        successcriteria: [
+          {
+            id: "expose-states-props",
+            num: "Interaction.1.3",
+            handle: " ",
+            text:
+              " Properties are generally specific to object types and refine the type of object; states are also specific to object type and provide information about a changeable condition such as checked status of a checkbox or visibility status of an object. All objects have values as well, which is often the text content but can be from another source, such as the user input in a form control.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 20",
+                text:
+                  "Technologies should define ways for user agents to expose and authors to set properties, states, and values in accessibility APIs that are relevant to full understanding of and interaction with the object type.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: "imperative-mechanism",
+        handle: "When providing imperative mechanisms to implement technology features (e.g., scripts), authors can expose accessibility information to accessibility APIs.",
+        text:
+          "Declarative technologies provide structured semantic helping authors to define complete models for objects that can be exposed to accessibility APIs.",
+        num: "Interaction.1.4",
+        successcriteria: [
+          {
+            id: "imperative-mechanism",
+            num: "Interaction.1.4",
+            handle: " ",
+            text:
+              "Imperative technologies give more freedom to the author but provide less built-in accessibility semantics, and sometimes do not provide a way to address accessibility APIs at all.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 15",
+                text:
+                  "Technologies that use imperative mechanisms to author content need to provide full interfaces to accessibility APIs so authors can set the complete object model.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: "help-widget",
+        handle: "User can obtain help information about the widget.",
+        text:
+          "Especially with novel widgets, users sometimes need context-specific help to learn how to use the widget effectively.",
+        num: "Interaction.1.5",
+        successcriteria: [
+          {
+            id: "help-widget",
+            num: "Interaction.1.5",
+            handle: " ",
+            text:
+              "This information is only useful if users can easily find it. Therefore, technologies should provide a mechanism for help information to be directly associated with and reachable from the control.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 16",
+                text:
+                  "Technologies should design content input and output methods to be agnostic to the specific hardware used, and provide application programming interfaces for supported hardware types such as keyboard and pointer so other hardware can effectively interact. Technologies should also emphasize the most hardware-neutral form of authoring feasible via more abstract events, and when providing hardware-specific features ensure that multiple types of hardware can be addressed.",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+];

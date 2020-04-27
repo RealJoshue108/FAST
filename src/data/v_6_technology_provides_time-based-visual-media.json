@@ -1,0 +1,129 @@
+{
+    principle: {
+      handle: "FAST Checklist",
+      text:
+        "If technology provides time-based visual media.",
+      num: "Time-based-media.1",
+    },
+    guidelines: [
+      {
+        id: "detailed-text",
+        num: "Time-based-media.1.1",
+        handle: "Some visual media cannot at present be made directly accessible to some users.",
+        text:
+          "Accessibility is provided via text or audio descriptions, either as part of the content or as an easily found supplementary resource.",
+        successcriteria: [
+          {
+            id: "detailed-text",
+            num: "Time-based-media.1.1",
+            handle: " ",
+            text:
+              "Technologies should provide mechanisms to provide these descriptions and associate them with the media.",
+            level:
+              " ",
+          },
+        ],
+      },
+      {
+        id: "sync-descriptions",
+        handle: "It is possible for authors to synchronize descriptions with the visual content.",
+        text:
+          "Descriptions are sometimes more helpful when they can be accessed along with the main video content.",
+        num: "Time-based-media.1.2",
+        successcriteria: [
+          {
+            id: "sync-descriptions",
+            num: "Time-based-media.1.2",
+            handle: " ",
+            text:
+              "Technologies should provide a mechanism to synchronize descriptions, e.g., via additional audio tracks, timed text, etc.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 28",
+                text:
+                  "read more about this FAST checkpoint.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: "descriptions-live",
+        handle: "It is possible for to provide descriptions even when the content is live.",
+        text:
+          "It is harder to provide descriptions for live content, because the description must be produced at the same time as the content itself.",
+        num: "Time-based-media.1.3",
+        successcriteria: [
+          {
+            id: "descriptions-live",
+            num: "Time-based-media.1.3",
+            handle: " ",
+            text:
+              "Nonetheless, for some live content such as newscasts with a broad audience, this can be an important feature.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 29",
+                text:
+                  "Technologies should provide support for live descriptions.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: "user-pause-play",
+        handle: "User can pause, stop, replay media",
+        text:
+          "While most media can be stopped (where replay restarts from the beginning) or paused (where replay restarts from where it starts), the controls to do so can be inaccessible to users. ",
+        num: "Time-based-media.1.4",
+        successcriteria: [
+          {
+            id: "user-pause-play",
+            num: "Time-based-media.1.4",
+            handle: " ",
+            text:
+              "Technologies need to provide accessible controls to do this, and also support programmatic control so assistive technologies can pause, stop, and start media playback.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 30",
+                text:
+                  "This support is important even for media that is not generally intended to be used in this way, such as short autoplay clips, in order to provide users control over excessive distraction.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: "send-output",
+        handle: "Users can send output to alternate device.",
+        text:
+          "Like descriptions of video, transcriptions of audio is important for some users.",
+        num: "Time-based-media.1.5",
+        successcriteria: [
+          {
+            id: "send-output",
+            num: "Time-based-media.1.5",
+            handle: " ",
+            text:
+              "Authors should be able to provide text transcripts or signed video alternatives and associate them directly with the primary content.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 31",
+                text:
+                  "Read more about this FAST checkpoint.",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+];

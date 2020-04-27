@@ -1,0 +1,153 @@
+{
+    principle: {
+      handle: "FAST Checklist",
+      text:
+        "If technology provides author control over color",
+      num: "Color.1",
+    },
+    guidelines: [
+      {
+        id: "mechanism-users-override-colors",
+        num: "Color.1.1",
+        handle: "There is a mechanism for users to override colors of text and user interface components.",
+        text:
+          "Custom color settings benefits not only users with visual perception impairments, but also users who can be distracted by certain colors or combinations.",
+        successcriteria: [
+          {
+            id: "mechanism-users-override-colors",
+            num: "Color.1.1",
+            handle: " ",
+            text:
+              "Technologies should provide features to allow users to set their own colors or contrast for text (including background) and standard user interface components.",
+            level:
+              " ",
+          },
+        ],
+      },
+      {
+        id: "color-classes",
+        handle: "Content can be resized.",
+        text:
+          "There is a feature for authors to define semantically available `\"color classes\" that users can easily map to custom colors, and give preference to this vs. coloring objects individually.",
+        num: "Color.1.2",
+        successcriteria: [
+          {
+            id: "content-resized",
+            num: "Color.1.2",
+            handle: " ",
+            text:
+              "Allowing user override of author design is most effective when the technology provides rich semantics for content, on which author or default colors are based, that can be easily recolored in a meaningful manner.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 8",
+                text:
+                  "Technologies should define semantics, or a way for authors to define and communicate the semantics they use, to allow most effective recoloring with minimal advance knowledge of site implementation.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: "color-schemata",
+        handle: "There is a feature for users to choose color schemata that work for them.",
+        text:
+          "Content authors are frequently concerned with branding, and want to ensure that the color scheme of content communicates the brand.",
+        num: "Color.1.3",
+        successcriteria: [
+          {
+            id: "color-schemata",
+            num: "Color.1.3",
+            handle: " ",
+            text:
+              "But when the color scheme makes content inaccessible to users this goal can be counter-productive.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 9",
+                text:
+                  " Technologies can increase author control and user accessibility by providing a way for authors to define multiple color schemes, allowing more accessible schemes still to partake in the branding process, and allowing users to choose from among available schemes.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: "report-color",
+        handle: "The foreground and background color of an object can be reported to the user via AT.",
+        text:
+          " Experienced color of content is frequently the way users refer to it; for instance in \"redlined\" text people may say \"find my edits in red\". ",
+        num: "Color.1.4",
+        successcriteria: [
+          {
+            id: "report-color",
+            num: "Color.1.4",
+            handle: " ",
+            text:
+              "Users of assistive technologies who cannot perceive the color directly therefore still have a need to know the color in order to interact with others.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 10",
+                text:
+                  "Therefore, technologies should define a way for foreground and background color to be reported to assistive technologies and easily searched.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: "set-color-seperately",
+        handle: "There are ways to set foreground and background colors separately for all objects.",
+        text:
+          "Color contrast problems often arise when the foreground color of one object is overlaid onto the (foreground or background) color of another object, resulting in an unintended contrast.",
+        num: "Color.1.5",
+        successcriteria: [
+          {
+            id: "set-color-seperately",
+            num: "Color.1.5",
+            handle: " ",
+            text:
+              "It is therefore important for technologies to allow both the foreground and background color of objects to be set to reasonable values and avoid this overlay problem.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 11",
+                text:
+                  "WCAG Technique related to this checkpoint G18 'Ensuring that a contrast ratio of at least 4.5:1 exists between text (and images of text) and background behind the text's.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: "compositing-rules",
+        handle: "When color compositing rules are not clearly designed, unexpected color contrast can occur.",
+        text:
+          "Many accessibility requirements come down to allowing users to customize presentation. When presentation is changed in a way the author or designer did not anticipate, unexpected side effects often appear that create new problems.",
+        num: "Color.1.6",
+        successcriteria: [
+          {
+            id: "compositing-rules",
+            num: "Color.1.6",
+            handle: " ",
+            text:
+              " The most frequent problem is when aliasing of edges causes visual artifacts, which in the case of text with its narrow strokes can significantly impact perception.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 12",
+                text:
+                  " Impacts of borders, shadows, and transparency can also lead to inaccessible contrast. Therefore technologies should specify compositing rules very precisely.",
+              },
+           ],
+          },
+        ],
+      },
+    ],
+  },

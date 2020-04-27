@@ -1,17 +1,17 @@
 import App from "./App.svelte";
 import { globalHistory as history } from "svelte-routing/src/history";
 import { wrapHistory } from "oaf-svelte-routing";
-import atag from "./data/atag.js";
+import new_fast from "./data/new_fast.js";
 
 const routerSettings = {
   documentTitle: location => {
     const defaultTitle =
-      "ATAG Conformance Evaluation Report Tool | Web Accessibility Initiative (WAI) | W3C";
+      "Framework for Accessible Specification of Technologies Tool | Web Accessibility Initiative (WAI) | W3C";
     let newTitle;
 
     if (location.pathname.startsWith("/step/")) {
       const id = location.pathname.substring(6, 7);
-      return (newTitle = `${atag[id - 1].principle.handle} - ${defaultTitle}`);
+      return (newTitle = `${new_fast[id - 1].principle.handle} - ${defaultTitle}`);
     }
 
     switch (location.pathname) {

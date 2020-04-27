@@ -7,7 +7,7 @@
   import Principle from './components/Principle.svelte';
   import Progress from './components/Progress.svelte';
   import ProgressItem from './components/ProgressItem.svelte';
-  import atag from './data/atag.js';
+  import new_fast from './data/new_fast.js';
   export let url = "";
 </script>
 
@@ -15,7 +15,7 @@
   <Router>
     <ProgressItem to="/">Start</ProgressItem>
     <ProgressItem to="/your-evaluation">Your Evaluation</ProgressItem>
-    {#each atag as { principle, guidelines }, i }
+    {#each new_fast as { principle, guidelines }, i }
     <ProgressItem to="step/{i+1}">{principle.num}<span class="visuallyhidden">: {principle.handle}</span></ProgressItem>
     {/each}
     <ProgressItem to="/results">Results</ProgressItem>

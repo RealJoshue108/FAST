@@ -1,4 +1,4 @@
-import atag from "../data/atag.js";
+import new_fast from "../data/new_fast.js";
 import { writable } from "svelte/store";
 
 const storageName = "atag_report_tool_evaluation";
@@ -43,7 +43,7 @@ export function getEvaluation() {
       meta: {},
     };
 
-    for (const principle of atag) {
+    for (const principle of new_fast) {
       for (const guideline of principle.guidelines) {
         for (const successcriterion of guideline.successcriteria) {
           cleanEvaluation["evaluationData"][successcriterion.id] = {
