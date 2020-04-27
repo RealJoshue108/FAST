@@ -42,6 +42,8 @@ This project has a JavaScript representation of the [DRAFT Fast Checklist](https
 
 Currently it is an abstraction from the original ATAG type layout that followed the object format outlined below. For the purposes of abstracting this tool for more general usage we follow the format here where:
 
+You can work in the <code>new_fast.js</code> file. Also each FAST 'princple' has its own JSON file, that were created and then added to the master file (<code>new_fast.js</code>). These are named 'v_2_technology_provides_x' for each group of related checkpoints.
+
 #For the grouping/renaming of sections:
 
 * principle = page for new group of related FAST checkpoints
