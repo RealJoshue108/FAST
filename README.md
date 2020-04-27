@@ -6,7 +6,7 @@ This tool will help with accessibility related review of W3C specifications. It 
 
 ## Status
 
-This project is an early prototype built on tooling developed by Eric Eggert/Hidde De Vries (W3C). It will be abstracted into more general set of tooling by Joshue O Connor/Michael Cooper (W3C).
+This project is an early prototype built on tooling developed by Eric Eggert/Hidde De Vries (W3C). It will be abstracted into more general set of tooling for FAST by Joshue O Connor/Michael Cooper (W3C).
 
 ## Development
 
