@@ -1,6 +1,6 @@
 # [Draft] FAST Reporting Tool prototype
 
-This is prototype of a tool that can be used for horizontal spec review. It is designed to be used in conjunction with [Framework for Accessible Specification of Technologies (https://w3c.github.io/apa/fast/#framework-for-accessible-specification-of-technologies) (FAST).
+This is prototype of a tool that can be used for horizontal spec review. It is designed to be used in conjunction with [Framework for Accessible Specification of Technologies](https://w3c.github.io/apa/fast/#framework-for-accessible-specification-of-technologies) (FAST).
 
 This tool will help with accessibility related review of W3C specifications. It creates a report (JSON object) that can be presented as an evaluation against any W3C specification.
 
