@@ -56,20 +56,20 @@ This is an example of everything that can exist in this object, formatted as [ya
 
 ```yaml
 principle:
-  handle: Short name for principle
-  text: Full text of principle
-  num: Unique reference for this item, e.g. A.1
+  handle: Short name for FAST 'parent' principle: Vis.1, Input.1
+  text: FAST principle such as "If technology allows visual rendering of content" or "If technology provides author control over color" - these determin the relevancy of a FAST "principle"
+  num: Unique reference for this item, e.g. Vis.1
   guidelines:
-   - id: “Slug” for this item, e.g. “web-based-accessible”
-     num: Unique reference for this item, e.g. A.1.1
+   - id: common sense naming convention used here - though slightly arbitrary for each checkpoint e.g. "content-resized" or "defined-way-for-non-visual-rendering"
+     num: Unique reference for this item, e.g. V.1.1, C.1.1. etc
      handle: Short name
-     text: Full text for this guideline
+     text: Full text for this 'guideline' - "There is a mechanism for users to override colors of text and user interface components" etc.
      successcriteria:
        - id: short-name
-         num: Unique reference for this item, e.g. A.1.1.1
+         num: Unique reference for this item, e.g. V.1.1
          handle: Short name
-         text: Full text for this success criterion
-         level: Level, e.g. “Level A”
+         text: Full text for this checkpoint
+         level: ignore this
          details:
            - type: note
              handle: Note 1
