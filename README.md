@@ -44,9 +44,9 @@ Currently it is an abstraction from the original ATAG type layout that followed 
 
 #For the grouping/renaming of sections:
 
-principle = page for new group of related FAST checkpoints
-guidelines = A new FAST section
-successcriterioa = Individual FAST checkpoints.
+* principle = page for new group of related FAST checkpoints
+* guidelines = A new FAST section
+* successcriterioa = Individual FAST checkpoints.
 
 The general process is to create instances of any given guideline/successcriteria for each FAST checkpoint.
 
