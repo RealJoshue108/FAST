@@ -817,11 +817,11 @@ const new_fast = [
         handle: "There are unambiguous ways to express relationships between units of content, such as object nesting, ID referencing, etc.",
         text:
           "Providing an accessible user experience sometimes requires tools to combine the features of or support rapid navigation between multiple related objects.",
-        num: "Semantics.1.6",
+        num: "Semantics.1.7",
         successcriteria: [
           {
             id: "express-relationships",
-            num: "Semantics.1.6",
+            num: "Semantics.1.7",
             handle: " ",
             text:
               "Technologies should provide ways for authors to define these relationships clearly and unambiguously.",
@@ -842,11 +842,11 @@ const new_fast = [
         handle: "Prefer structural semantics to presentational semantics.",
         text:
           "Prefer structural semantics to presentational semantics.",
-        num: "Semantics.1.6",
+        num: "Semantics.1.8",
         successcriteria: [
           {
             id: "prefer-structural-semantics",
-            num: "Semantics.1.6",
+            num: "Semantics.1.8",
             handle: " ",
             text:
               "Authors frequently use presentation to convey structure, yet when taken out of context this presentation is not meaningful to all users.",
@@ -867,11 +867,11 @@ const new_fast = [
         handle: "When providing presentational semantics, they can be easily mapped to structural semantics, e.g., to support restyling or meaningful exposure to accessibility APIs.",
         text:
           "If technologies do provide presentational semantics, they should define clear mappings to existing structural semantics.",
-        num: "Semantics.1.6",
+        num: "Semantics.1.9",
         successcriteria: [
           {
             id: "mapping-relationships",
-            num: "Semantics.1.6",
+            num: "Semantics.1.9",
             handle: " ",
             text:
               "This will allow users to interact with content on the basis of implied structure.",
@@ -892,11 +892,11 @@ const new_fast = [
         handle: "Support a comprehensive set of authoring use cases to minimize the need for alternative content. (e.g., don't make authors resort to text in images to get the style they want).",
         text:
           "Many accessibility problems in web content arise from authors attempting to work around limitations of the content language and using the technology in a way that it was not intended.",
-        num: "Semantics.1.6",
+        num: "Semantics.1.10",
         successcriteria: [
           {
             id: "support-authoring-use-cases",
-            num: "Semantics.1.6",
+            num: "Semantics.1.10",
             handle: " ",
             text:
               "Technologies should provide rich feature sets that allows authors to accomplish their goals without resort to inaccessible usages.",
@@ -917,11 +917,11 @@ const new_fast = [
         handle: "Semantics allow precise and replicable location information in the document to be determined.",
         text:
           "Finding a given location in a document is important for a variety of use cases.",
-        num: "Semantics.1.6",
+        num: "Semantics.1.11",
         successcriteria: [
           {
             id: "semantics-allow-location",
-            num: "Semantics.1.6",
+            num: "Semantics.1.11",
             handle: " ",
             text:
               " Users of some assistive technologies require the tool to navigate to the location for them and may be confused if the location is merely approximate.",
@@ -942,11 +942,11 @@ const new_fast = [
         handle: "Semantics exist to convey meaning that is commonly conveyed via presentation.",
         text:
           "Meaning is conveyed by a variety of presentational attributes.",
-        num: "Semantics.1.6",
+        num: "Semantics.1.12",
         successcriteria: [
           {
             id: "meaning-presentation",
-            num: "Semantics.1.6",
+            num: "Semantics.1.12",
             handle: " ",
             text:
               " Separated blocks of text represent paragraphs, indented text represents quotes, short enlarged text indicates headings, bold text conveys emphasis, relative size indicates relative importance, etc.",
