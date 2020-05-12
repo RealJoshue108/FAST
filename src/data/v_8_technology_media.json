@@ -1,0 +1,167 @@
+{
+    principle: {
+      handle: "FAST Checklist",
+      text:
+        "If technology provides time based media or audio.",
+      num: "Media.1",
+    },
+    guidelines: [
+      {
+        id: "text-descriptions",
+        num: "Media.1.1",
+        handle: "It is possible for authors to provide detailed text descriptions, audio descriptions, or both of the important content in the media.",
+        text:
+          "Some visual media cannot at present be made directly accessible to some users.",
+        successcriteria: [
+          {
+            id: "text-descriptions",
+            num: "Media.1.1",
+            handle: " ",
+            text:
+              "Accessibility is provided via text or audio descriptions, either as part of the content or as an easily found supplementary resource. Technologies should provide mechanisms to provide these descriptions and associate them with the media. ",
+            level:
+              " ",
+          },
+        ],
+      },
+      {
+        id: "sync-descriptions",
+        handle: "It is possible for authors to synchronize descriptions with the visual content.",
+        text:
+          "Captions are essentially text transcripts that are synchronized to appear in small blocks when the relevant audio is playing.",
+        num: "Media.1.2",
+        successcriteria: [
+          {
+            id: "sync-descriptions",
+            num: "Media.1.2",
+            handle: " ",
+            text:
+              "Descriptions are sometimes more helpful when they can be accessed along with the main video content.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 33",
+                text:
+                  " Technologies should provide a mechanism to synchronize descriptions, e.g., via additional audio tracks, timed text, etc.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: "volume-level@@",
+        handle: "User can adjust volume level",
+        text:
+          "Some users require different volume levels than default, and may need the relative volume of different elements to be different.",
+        num: "Media.1.3",
+        successcriteria: [
+          {
+            id: "volume-level",
+            num: "Media.1.3",
+            handle: " ",
+            text:
+              "Technologies should provide ways for users to adjust the volume of audio content within the content, not simply relying on hardware volume settings.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 34",
+                text:
+                  "Read more about this FAST checkpoint.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: "audio-contrast",
+        handle: "Contrast between foreground and background audio is sufficient",
+        text:
+          "Understanding of audio is improved when background sounds do not occlude foreground or primary audio.",
+        num: "Media.1.4",
+        successcriteria: [
+          {
+            id: "audio-contrast",
+            num: "Media.1.4",
+            handle: " ",
+            text:
+              "To support this, authors should be able to set background and foreground levels separately. Ideally, users should also be able to adjust them separately via separate audio tracks.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 35",
+                text:
+                  "Read more about this FAST checkpoint.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: "mute-separately",
+        handle: "Unnecessary background audio can be muted separately from the foreground audio",
+        text:
+          "When background audio makes understanding of content too difficult, users should be able to suppress it without losing the foreground audio.",
+        num: "Media.1.5",
+        successcriteria: [
+          {
+            id: "mute-separately",
+            num: "Audio.1.5",
+            handle: " ",
+            text:
+              "Technologies should provide features to make this possible, e.g., via support of multiple audio tracks.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 36",
+                text:
+                  "Read more about this FAST checkpoint.",
+              },
+            ],
+          },
+        ],
+        {
+        id: "no-trigger",
+        handle: "Technology does not include triggers for audiosensitive seizures or allows those triggers to be disabled.",
+        text:
+          "Like photosensitive epilepsy, audiosensitive epilepsy is known to occur.",
+        num: "Audio.1.5",
+        successcriteria: [
+          {
+            id: "no-trigger",
+            num: "Audio.1.5",
+            handle: " ",
+            text:
+              "he triggering conditions are less widely known at this time, but nonetheless technologies should avoid enabling authoring of triggering content, or provide means to detect, warn, avoid, and suppress triggering content.",
+            level: " ",
+            details: [
+              {
+                type: "note",
+                handle: "Note 37",
+                text:
+                  "Read more about this FAST checkpoint.",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+];
+
+
+
+
+
+
+
+ 
+
+It is possible for to provide descriptions even when the content is live. It is harder to provide descriptions for live content, because the description must be produced at the same time as the content itself. Nonetheless, for some live content such as newscasts with a broad audience, this can be an important feature. Technologies should provide support for live descriptions.  
+
+User can pause, stop, replay media. While most media can be stopped (where replay restarts from the beginning) or paused (where replay restarts from where it starts), the controls to do so can be inaccessible to users. Technologies need to provide accessible controls to do this, and also support programmatic control so assistive technologies can pause, stop, and start media playback. This support is important even for media that is not generally intended to be used in this way, such as short autoplay clips, in order to provide users control over excessive distraction.  
+
+Users can send output to alternate device.  Some users use multiple video or audio devices to tune their accessible interaction. For instance, a screen reader user may direct content audio to a different device than screen reader audio in order to reduce collision, or a magnifier user may direct video to a separate screen in order to better arrange their available screen space. Technologies should provide features to support this.
