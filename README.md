@@ -2,11 +2,13 @@
 
 This is prototype of a tool that can be used for horizontal spec review. It is designed to be used in conjunction with [Framework for Accessible Specification of Technologies](https://w3c.github.io/apa/fast/#framework-for-accessible-specification-of-technologies) (FAST).
 
-This tool will help with accessibility related review of W3C specifications. It creates a report (JSON object) that can be presented as an evaluation against any W3C specification.
-
-## Status
+This evaluation tool is designed to help with accessibility related review of W3C specifications. It creates a report (JSON object) that can be presented to support and assess accessibility related work within W3C specification. 
 
 This project is an early prototype built on tooling developed originally by Eric Eggert/Hidde De Vries (W3C). It will be abstracted into more general set of tooling for FAST by Joshue O Connor/Michael Cooper (W3C).
+
+## Status
+This is a working proof of concept version containing <a href="https://w3c.github.io/apa/fast/checklist.html">three categories from the FAST checklist</a>. They are 'Input', 'Interaction', and 'Semantics'
+
 
 ## Development
 
