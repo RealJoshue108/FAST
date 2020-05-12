@@ -7,7 +7,7 @@ This evaluation tool is designed to help with accessibility related review of W3
 This project is an early prototype built on tooling developed originally by Eric Eggert/Hidde De Vries (W3C). It will be abstracted into more general set of tooling for FAST by Joshue O Connor/Michael Cooper (W3C).
 
 ## Status
-This is a working proof of concept version containing <a href="https://w3c.github.io/apa/fast/checklist.html">three categories from the FAST checklist</a>. They are 'Input', 'Interaction', and 'Semantics'
+This is a working proof of concept version containing <a href="https://w3c.github.io/apa/fast/checklist.html">three categories from the FAST checklist</a>. They are 'Input', 'Interaction', and 'Semantics'.
 
 
 ## Development
