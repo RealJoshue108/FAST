@@ -23,7 +23,7 @@
   Results
 </Header>
 <p>Thanks for using this tool. Your FAST evaluation is displayed in full below.</p>
-<p><a href={jsonDownload} class="button button-secondary">Download FAST evaluation (JSON)</a></p>
+<p><a href={jsonDownload} download="report.json" class="button button-secondary">Download FAST evaluation (JSON)</a></p>
 <dl>
   {#if $evaluation["meta"]["name"]["value"]}
   <dt>Name</dt>
