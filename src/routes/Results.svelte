@@ -1,13 +1,19 @@
 <script>
+  import { onMount } from 'svelte';
   import marked from 'marked';
-  import { evaluation } from '../stores/evaluation.js';
   import Header from '../components/Header.svelte';
   import HeaderSub from '../components/HeaderSub.svelte';
+  import { evaluation } from '../stores/evaluation.js';
+  import { currentPage } from '../stores/currentPage.js';
 
   function createDownload(evaluation) {
     let blob = new Blob([JSON.stringify(evaluation)]);
     return url
   }
+
+  onMount(() => {
+    currentPage.update( currentPage => 'Results' );
+  });
 
   $: jsonDownload = `data:application/json;charset=utf-8,${encodeURIComponent(JSON.stringify($evaluation))}`;
 </script>

@@ -1,14 +1,15 @@
 <script>
-  import { navigate } from 'svelte-routing';
+  import { navigate, Router, Link } from 'svelte-routing';
   import { evaluation } from '../stores/evaluation.js';
+  import { currentPage } from '../stores/currentPage.js';
+  import { importEvaluation } from '../utils/importEvaluation.js';
+  import { getEvaluatedItems } from '../utils/getEvaluatedItems.js';
   import MoreInfo from './MoreInfo.svelte';
 
-  let fresh = evaluation.isFresh();
-  let startedNew = false;
+  let fresh;
 
   function startNew() {
     navigate('/your-evaluation', { replace: false });
-    startedNew = true;
   }
 
   function toOverview() {
@@ -22,63 +23,45 @@
     }
   }
 
-  function importEvaluation(event) {
-    var files = event.target.files;
-
-    for (var i = 0, file; file = files[i]; i++) {
-      if (!file.type.match('application/json')) {
-        return
-      }
-
-      var reader = new FileReader();
-
-      reader.onload = function(event) {
-        try {
-          var converted = JSON.parse(event.target.result);
-
-          if (converted.evaluationData) {
-            evaluation.update(evaluation => converted);
-
-            if (converted.meta.name.value) {
-              alert(`Evaluation “${converted.meta.name.value}” loaded`);
-            } else {
-              alert('Evalution loaded');
-            }
-            startedNew = true;
-          }
-        }
-        catch {
-          alert('No data found or invalid import');
-        }
-      }
-
-      reader.readAsText(file);
-    }
-  }
-
   evaluation.subscribe(value => {
     fresh = evaluation.isFresh();
   });
 
-  $: evaluatedItems = $evaluation ? Object.values($evaluation.evaluationData).filter(item => item.evaluated === true) : [];
+  $: fresh = evaluation.isFresh();
+  $: evaluatedItems = getEvaluatedItems($evaluation);
+  $: totalCriteria = Object.values($evaluation.evaluationData).filter( item => item.level && item.level.length <= $evaluation.meta.conformanceTarget.value.length).length;
 </script>
 
 <aside>
-  {#if fresh && !startedNew}
-   <h2>Your evaluation</h2>
-   <p>No existing evaluation found.</p>
-   <button class="button" on:click={startNew}>New evaluation</button>
+  {#if fresh && $currentPage === "Start"}
+   <h2>Your Report</h2>
+   <p>Welcome to the FAST Report Tool.</p>
+   <button class="button" on:click={startNew}>Start new report</button>
    <input type="file" id="import-evaluation" on:change={importEvaluation} class="visuallyhidden" accept="application/json"/>
-   <label for="import-evaluation" class="button button-secondary">Import</label>
-  {:else if !$evaluation["meta"]["name"]["value"]}
-  <h2>Your evaluation</h2>
-  <p>Set up information about your evaluation.</p>
+   <label for="import-evaluation" class="button button-secondary">Import report</label>
+  {:else if $currentPage === "Your Report" }
+  <Router>
+    <h2>
+      {#if $evaluation["meta"] && $evaluation["meta"]["name"] && $evaluation["meta"]["name"]["value"]}
+      <small>Evaluating </small>{$evaluation["meta"]["name"]["value"]}
+      {:else}
+      Your Report
+      {/if}
+    </h2>
+    <p>On this page, you can add information about your report, or start evaluating straight away in <Link to="/step/1">Step 1</Link>.</p>
+  </Router>
   {:else}
     <h2>
-      <small>Evaluating </small>{$evaluation["meta"]["name"]["value"]}
+      {#if $evaluation["meta"] && $evaluation["meta"]["name"] && $evaluation["meta"]["name"]["value"]}
+      <small>Reporting on </small>{$evaluation["meta"]["name"]["value"]}
+      {:else}
+      Your Report
+      {/if}
     </h2>
-    <p>Evaluated <strong>{evaluatedItems.length}</strong> out of <strong>{Object.values($evaluation.evaluationData).length}</strong> checkpoints.</p>
-    <button class="button" on:click={toOverview}>Save / Overview</button>
+    {#if evaluatedItems && $evaluation.evaluationData}
+    <p>Reported on <strong>{evaluatedItems.length}</strong> out of <strong>{totalCriteria}</strong> success criteria.</p>
+    {/if}
+    <button class="button" on:click={toOverview}>View report</button>
     <button class="button button-secondary" on:click={clear}>Clear</button>
   {/if}
 </aside>
@@ -90,7 +73,7 @@
     align-self: start;
     margin-bottom: 2em;
   }
-  @media (min-width: 50em) {
+  @media (min-width: 60em) {
     aside {
       position: sticky;
       top: 1em;
@@ -102,7 +85,8 @@
   h2 small {
     display: block;font-weight: normal;color: var(--dk-blue);
   }
-  .button + .button {
+  .button + .button,
+  .button + input + .button /* the file upload button */ {
     margin-top: .25em;
   }
   input[type="file"]:focus + label {
