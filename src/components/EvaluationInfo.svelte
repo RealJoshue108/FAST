@@ -9,7 +9,7 @@
   let fresh;
 
   function startNew() {
-    navigate('/your-evaluation', { replace: false });
+    navigate('/your-report', { replace: false });
   }
 
   function toOverview() {
