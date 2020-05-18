@@ -52,5 +52,5 @@
 </details>
 
 <Pager label="Previous/Next Step">
-  <PagerLink to="/your-evaluation" direction="next">Your evaluation</PagerLink>
+  <PagerLink to="/your-report" direction="next">Your Report</PagerLink>
 </Pager>

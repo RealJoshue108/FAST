@@ -32,7 +32,7 @@
 
   <Pager label="Previous/Next Step">
     {#if id === 0}
-    <PagerLink to={"/your-evaluation"} direction="previous">Your Evaluation</PagerLink>
+    <PagerLink to={"/your-report"} direction="previous">Your Report</PagerLink>
     {/if}
     {#if id > 0 && id < new_fast.length }
     <PagerLink to={`/step/${id}`} direction="previous">
