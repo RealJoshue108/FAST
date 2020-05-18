@@ -30,7 +30,7 @@
 <div {id} class="criterion">
   <h4>
     {handle}
-    <a href={linkToImplementing} class="criterion__ref" target="_blank">Implementing {num}</a>
+<!--     <a href={linkToImplementing} class="criterion__ref" target="_blank">Implementing {num}</a> -->
   </h4>
   <p>{text}</p>
   {#if list}<SuccessCriterionDetails type="list" details={list} />{/if}
