@@ -1,8 +1,14 @@
 <script>
+  import { onMount } from 'svelte';
   import ExpandCollapseAll from '../components/ExpandCollapseAll.svelte';
   import Header from '../components/Header.svelte';
   import Pager from '../components/Pager.svelte';
   import PagerLink from '../components/PagerLink.svelte';
+  import { currentPage } from '../stores/currentPage.js';
+
+  onMount(() => {
+    currentPage.update( currentPage => 'Start' );
+  });
 </script>
 
 <Header>FAST Report Tool</Header>
@@ -52,5 +58,5 @@
 </details>
 
 <Pager label="Previous/Next Step">
-  <PagerLink to="/your-evaluation" direction="next">Your evaluation</PagerLink>
+  <PagerLink to="/your-report" direction="next">Your Report</PagerLink>
 </Pager>

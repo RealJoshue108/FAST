@@ -1,16 +1,21 @@
 <script>
-
+  import { onMount } from 'svelte';
   import Header from './Header.svelte';
   import HeaderSub from './HeaderSub.svelte';
   import Guideline from './Guideline.svelte';
   import Pager from './Pager.svelte';
   import PagerLink from './PagerLink.svelte';
   import new_fast from '../data/new_fast.js';
+  import { currentPage } from '../stores/currentPage.js';
   export let id = null;
   export let className = undefined;
 
   $: principle = new_fast[id].principle || null;
   $: guidelines = new_fast[id].guidelines || null;
+
+  onMount(() => {
+    currentPage.update( currentPage => 'Report' );
+  });
 
   const normalisedPrincipleId = new_fast[id].principle.num.replace(/\./g, '').toLowerCase();
   const linkToPrinciple = `https://w3c.github.io/apa/fast/#${normalisedPrincipleId}`;
@@ -25,14 +30,15 @@
   </Header>
 
   <p>More details: <a href={linkToPrinciple} target="_blank" rel="noopener roreferrer">{principle.num} {principle.text}</a></p>
-  
-  {#each guidelines as guideline }
+
+   
+  {#each guidelines as guideline, i (guideline.id) }
   <Guideline {...guideline} />
   {/each}
 
   <Pager label="Previous/Next Step">
     {#if id === 0}
-    <PagerLink to={"/your-evaluation"} direction="previous">Your Evaluation</PagerLink>
+    <PagerLink to={"/your-report"} direction="previous">Your Report</PagerLink>
     {/if}
     {#if id > 0 && id < new_fast.length }
     <PagerLink to={`/step/${id}`} direction="previous">

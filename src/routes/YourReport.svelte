@@ -1,21 +1,27 @@
 <script>
+  import { onMount } from 'svelte';
   import Header from '../components/Header.svelte';
   import HeaderSub from '../components/HeaderSub.svelte';
   import Pager from '../components/Pager.svelte';
   import PagerLink from '../components/PagerLink.svelte';
   import { evaluation } from '../stores/evaluation.js';
+  import { currentPage } from '../stores/currentPage.js';
+
+  onMount(() => {
+    currentPage.update( currentPage => 'Your Report' );
+  });
 </script>
 
 <Header>
   <HeaderSub>
     FAST Report Tool
   </HeaderSub>
-  Your Evaluation
+  Your Report
 </Header>
 
 <p>On this page, you can set up your evaluation.</p>
 
-<h2>About your evaluation</h2>
+<h2>About your report</h2>
 
 <div class="field">
   <label for="evaluation-meta-name">Name of W3C specification</label>

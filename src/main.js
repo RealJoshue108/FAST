@@ -11,14 +11,16 @@ const routerSettings = {
 
     if (location.pathname.startsWith("/step/")) {
       const id = location.pathname.substring(6, 7);
-      return (newTitle = `${new_fast[id - 1].principle.handle} - ${defaultTitle}`);
+      return (newTitle = `${
+        new_fast[id - 1].principle.handle
+      } - ${defaultTitle}`);
     }
 
     switch (location.pathname) {
       case "/":
         return (newTitle = `Start - ${defaultTitle}`);
-      case "/your-evaluation":
-        return (newTitle = `Your Evaluation - ${defaultTitle}`);
+      case "/your-report":
+        return (newTitle = `Your Report - ${defaultTitle}`);
       case "/results":
         return (newTitle = `Results - ${defaultTitle}`);
     }
