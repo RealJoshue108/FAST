@@ -41,7 +41,7 @@
 <table>
 	<thead>
 		<tr>
-			<th>Success Criterion</th>
+			<th>Check point</th>
 			<th>Result</th>
 			<th>Observations</th>
 		</tr>
