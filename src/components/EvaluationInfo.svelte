@@ -59,7 +59,7 @@
       {/if}
     </h2>
     {#if evaluatedItems && $evaluation.evaluationData}
-    <p>Reported on <strong>{evaluatedItems.length}</strong> out of <strong>{totalCriteria}</strong> success criteria.</p>
+    <p>Reported on <strong>{evaluatedItems.length}</strong> out of <strong>{totalCriteria}</strong> FAST checkpoint.</p>
     {/if}
     <button class="button" on:click={toOverview}>View report</button>
     <button class="button button-secondary" on:click={clear}>Clear</button>
