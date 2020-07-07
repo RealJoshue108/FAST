@@ -1,5 +1,6 @@
 import new_fast from "../data/new_fast.js";
 import { writable } from "svelte/store";
+import { createCleanEvaluation } from "../utils/createCleanEvaluation.js";
 
 const storageName = "atag_report_tool_evaluation";
 let fresh = true;

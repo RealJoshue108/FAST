@@ -1,4 +1,6 @@
 <script>
+
+  import { evaluation } from "../stores/evaluation.js";
   import { onMount } from 'svelte';
   import Header from './Header.svelte';
   import HeaderSub from './HeaderSub.svelte';
@@ -28,13 +30,30 @@
     </HeaderSub>
     {principle.handle}
   </Header>
+ 
 
-  <p>More details: <a href={linkToPrinciple} target="_blank" rel="noopener roreferrer">{principle.num} {principle.text}</a></p>
+<p>
+  <label for={`principle-applicability-${principle.num}`}>Mark this category as N/A in report.</label>
+  <input 
+    type="checkbox" 
+    id={`principle-applicability-${principle.num}`} 
+    bind:checked={$evaluation['meta']['principleApplicability'][principle.num]} 
+    on:blur={() => {
+    evaluation.updateCache($evaluation);
+  }}>
+  </p>
+  
+      <p>More details: <a href={linkToPrinciple} target="_blank" rel="noopener roreferrer">{principle.num} {principle.text}</a></p>
 
-   
+ {#if $evaluation['meta']['principleApplicability'][principle.num]}
+
   {#each guidelines as guideline, i (guideline.id) }
   <Guideline {...guideline} />
   {/each}
+
+   {:else}
+    <p>The checkbox for this principle was not checked, so it is not applicable, so we won't show any guidelines, but this text instead.</p>
+  {/if}
 
   <Pager label="Previous/Next Step">
     {#if id === 0}

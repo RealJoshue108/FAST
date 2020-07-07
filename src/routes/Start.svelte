@@ -16,7 +16,7 @@
 <aside class="box">
   <header class="box-h ">About</header>
   <div class="box-i">
-<p>This is a draft checklist to support <a href="/">Framework for Accessibility in the Specification of Technologies (FAST)</a> prepared by the <a href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a>. The goal of <abbr title="Framework for Accessibility in the Specification of Technologies">FAST</abbr> is to describe the features that web technologies should provide to ensure it is possible to create content that is accessible to users with disabilities.
+<p>This is a draft checklist to support <a href="https://w3c.github.io/apa/fast/">Framework for Accessibility in the Specification of Technologies (FAST)</a> prepared by the <a href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a>. The goal of <abbr title="Framework for Accessibility in the Specification of Technologies">FAST</abbr> is to describe the features that web technologies should provide to ensure it is possible to create content that is accessible to users with disabilities.
   </div>
 </aside>
 
